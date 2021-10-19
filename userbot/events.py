@@ -54,25 +54,53 @@ def man_cmd(
                 cmd2 = sudo_ + command
             else:
                 cmd1 = (
-                    (man_ + pattern).replace("$", "").replace("\\", "").replace("^", "")
-                )
+                    (man_ +
+                     pattern).replace(
+                        "$",
+                        "").replace(
+                        "\\",
+                        "").replace(
+                        "^",
+                        ""))
                 cmd2 = (
-                    (sudo_ + pattern).replace("$", "").replace("\\", "").replace("^", "")
-                )
+                    (sudo_ +
+                     pattern).replace(
+                        "$",
+                        "").replace(
+                        "\\",
+                        "").replace(
+                        "^",
+                        ""))
             try:
                 CMD_LIST[file_test].append(cmd1)
             except BaseException:
                 CMD_LIST.update({file_test: [cmd1]})
 
-
     def decorator(func):
         if not disable_edited:
-            bot.add_event_handler(func, events.MessageEdited(**args, outgoing=True, pattern=man_reg))
-        bot.add_event_handler(func, events.NewMessage(**args, outgoing=True, pattern=man_reg))
+            bot.add_event_handler(
+                func, events.MessageEdited(
+                    **args, outgoing=True, pattern=man_reg))
+        bot.add_event_handler(
+            func,
+            events.NewMessage(
+                **args,
+                outgoing=True,
+                pattern=man_reg))
         if allow_sudo:
             if not disable_edited:
-                bot.add_event_handler(func, events.MessageEdited(**args, from_users=list(SUDO_USERS), pattern=sudo_reg))
-            bot.add_event_handler(func, events.NewMessage(**args, from_users=list(SUDO_USERS), pattern=sudo_reg))
+                bot.add_event_handler(
+                    func,
+                    events.MessageEdited(
+                        **args,
+                        from_users=list(SUDO_USERS),
+                        pattern=sudo_reg))
+            bot.add_event_handler(
+                func,
+                events.NewMessage(
+                    **args,
+                    from_users=list(SUDO_USERS),
+                    pattern=sudo_reg))
         try:
             LOAD_PLUG[file_test].append(func)
         except Exception:
