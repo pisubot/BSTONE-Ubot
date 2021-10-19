@@ -29,6 +29,7 @@ from telethon.sessions import StringSession
 from telethon.sync import TelegramClient, custom, events
 from telethon.tl.types import InputWebDocument
 
+from .events import man_cmd, man_handler
 from .storage import Storage
 
 STORAGE = (lambda n: Storage(Path("data") / n))
