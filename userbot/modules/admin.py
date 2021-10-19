@@ -823,7 +823,9 @@ async def get_user_from_event(
         LOGS.error(str(e))
     if not noedits:
         await edit_delete(
-            manevent, "**Mohon Reply Pesan atau Berikan User ID/Username pengguna!**", 30
+            manevent,
+            "**Mohon Reply Pesan atau Berikan User ID/Username pengguna!**",
+            30,
         )
     return None, None
 
