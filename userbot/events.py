@@ -15,7 +15,7 @@ from telethon import events
 from time import gmtime, strftime
 from traceback import format_exc
 
-from userbot import CMD_HANDLER, CMD_LIST, LOAD_PLUG, LOGSPAMMER, SUDO_HANDLER, SUDO_USERS, bot
+from . import CMD_HANDLER, CMD_LIST, LOAD_PLUG, LOGSPAMMER, SUDO_HANDLER, SUDO_USERS, bot
 
 
 def man_cmd(
