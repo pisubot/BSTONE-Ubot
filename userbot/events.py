@@ -15,55 +15,81 @@ from telethon import events
 from time import gmtime, strftime
 from traceback import format_exc
 
-from userbot import CMD_HANDLER, CMD_LIST, LOGSPAMMER, bot
+from userbot import CMD_HANDLER, CMD_LIST, LOAD_PLUG, LOGSPAMMER, SUDO_HANDLER, SUDO_USERS, bot
 
 
-def man_cmd(pattern=None, command=None, **args):
+def man_cmd(
+    pattern: str = None,
+    allow_sudo: bool = True,
+    disable_edited: bool = False,
+    forword=False,
+    command: str = None,
+    **args,
+):
     args["func"] = lambda e: e.via_bot_id is None
     stack = inspect.stack()
     previous_stack_frame = stack[1]
     file_test = Path(previous_stack_frame.filename)
     file_test = file_test.stem.replace(".py", "")
-    args.get("allow_sudo", False)
+
+    if "disable_edited" in args:
+        del args["disable_edited"]
+
     if pattern is not None:
-        if pattern.startswith(r"\#"):
-            args["pattern"] = re.compile(pattern)
-        elif pattern.startswith(r"^"):
-            args["pattern"] = re.compile(pattern)
-            cmd = pattern.replace("$", "").replace("^", "").replace("\\", "")
-            try:
-                CMD_LIST[file_test].append(cmd)
-            except BaseException:
-                CMD_LIST.update({file_test: [cmd]})
+        global man_reg
+        global sudo_reg
+        if (
+            pattern.startswith(r"\#")
+            or not pattern.startswith(r"\#")
+            and pattern.startswith(r"^")
+        ):
+            man_reg = sudo_reg = re.compile(pattern)
         else:
-            if len(CMD_HANDLER) == 2:
-                catreg = "^" + CMD_HANDLER
-                reg = CMD_HANDLER[1]
-            elif len(CMD_HANDLER) == 1:
-                catreg = "^\\" + CMD_HANDLER
-                reg = CMD_HANDLER
-            args["pattern"] = re.compile(catreg + pattern)
+            man_ = "\\" + CMD_HANDLER
+            sudo_ = "\\" + SUDO_HANDLER
+            man_reg = re.compile(man_ + pattern)
+            sudo_reg = re.compile(sudo_ + pattern)
             if command is not None:
-                cmd = reg + command
+                cmd1 = man_ + command
+                cmd2 = sudo_ + command
             else:
-                cmd = (
-                    (reg +
-                     pattern).replace(
-                        "$",
-                        "").replace(
-                        "\\",
-                        "").replace(
-                        "^",
-                        ""))
+                cmd1 = (
+                    (man_ + pattern).replace("$", "").replace("\\", "").replace("^", "")
+                )
+                cmd2 = (
+                    (sudo_ + pattern).replace("$", "").replace("\\", "").replace("^", "")
+                )
             try:
-                CMD_LIST[file_test].append(cmd)
+                CMD_LIST[file_test].append(cmd1)
             except BaseException:
-                CMD_LIST.update({file_test: [cmd]})
+                CMD_LIST.update({file_test: [cmd1]})
 
-    if "allow_edited_updates" in args and args["allow_edited_updates"]:
-        del args["allow_edited_updates"]
 
-    return events.NewMessage(**args)
+    def decorator(func):
+        if not disable_edited:
+            bot.add_event_handler(func, events.MessageEdited(**args, outgoing=True, pattern=man_reg))
+        bot.add_event_handler(func, events.NewMessage(**args, outgoing=True, pattern=man_reg))
+        if allow_sudo:
+            if not disable_edited:
+                bot.add_event_handler(func, events.MessageEdited(**args, from_users=list(SUDO_USERS), pattern=sudo_reg))
+            bot.add_event_handler(func, events.NewMessage(**args, from_users=list(SUDO_USERS), pattern=sudo_reg))
+        try:
+            LOAD_PLUG[file_test].append(func)
+        except Exception:
+            LOAD_PLUG.update({file_test: [func]})
+        return func
+
+    return decorator
+
+
+def man_handler(
+    **args,
+):
+    def decorator(func):
+        bot.add_event_handler(func, events.NewMessage(**args, incoming=True))
+        return func
+
+    return decorator
 
 
 def command(**args):
