@@ -101,7 +101,7 @@ async def change_title(e):
         await e.client(settitle(call=await get_call(e), title=title.strip()))
         await e.edit(f"**Berhasil Mengubah Judul VCG Menjadi** `{title}`")
     except Exception as ex:
-        await e.edit(f"**ERROR:** `{ex}`") 
+        await e.edit(f"**ERROR:** `{ex}`")
 
 
 CMD_HELP.update(
