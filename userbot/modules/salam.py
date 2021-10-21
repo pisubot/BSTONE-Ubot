@@ -10,13 +10,13 @@ DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 # ============================================
 
 
-@bot.on(man_cmd(outgoing=True, pattern="p(?: |$)(.*)"))
+@bot.on(man_cmd(outgoing=True, pattern="pe(?: |$)(.*)"))
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("**Assalamualaikum Dulu Biar Sopan**")
 
 
-@bot.on(man_cmd(outgoing=True, pattern=r"pe(?: |$)(.*)"))
+@bot.on(man_cmd(outgoing=True, pattern=r"p(?: |$)(.*)"))
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("**Assalamualaikum Warahmatullahi Wabarakatuh**")
@@ -31,20 +31,20 @@ async def typewriter(typew):
     await typew.edit("**Assalamualaikum...**")
 
 
-@bot.on(man_cmd(outgoing=True, pattern=r"l(?: |$)(.*)"))
+@bot.on(man_cmd(outgoing=True, pattern=r"w(?: |$)(.*)"))
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    await typew.edit("**Wa'alaikumsalam**")
+    await typew.edit("**Waalaikumussalam Warahmatullahi Wabarakatuh..**")
 
 
 CMD_HELP.update(
     {
         "salam": f"**Plugin : **`salam`\
-        \n\n  •  **Syntax :** `{cmd}p`\
-        \n  •  **Function : **Assalamualaikum Dulu Biar Sopan..\
         \n\n  •  **Syntax :** `{cmd}pe`\
+        \n  •  **Function : **Assalamualaikum Dulu Biar Sopan..\
+        \n\n  •  **Syntax :** `{cmd}p`\
         \n  •  **Function : **salam Kenal dan salam\
-        \n\n  •  **Syntax :** `{cmd}l`\
+        \n\n  •  **Syntax :** `{cmd}w`\
         \n  •  **Function : **Untuk Menjawab salam\
         \n\n  •  **Syntax :** `{cmd}ass`\
         \n  •  **Function : **Salam Bahas arab\
