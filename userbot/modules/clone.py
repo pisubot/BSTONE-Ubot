@@ -21,13 +21,13 @@ async def impostor(event):
     inputArgs = event.pattern_match.group(1)
 
     if "restore" in inputArgs:
-        await event.edit("**Kembali ke identitas asli...**")
+        await event.edit("**Mengembalikan ke identitas asli...**")
         if not STORAGE.userObj:
             return await event.edit(
                 "**Anda harus mengclone orang dulu sebelum kembali!**"
             )
         await updateProfile(STORAGE.userObj, restore=True)
-        return await event.edit("**Berhasil Mengembalikan Akun Anda dari clone**")
+        return await event.edit("**Berhasil kembali ke identitas asli.**")
     if inputArgs:
         try:
             user = await event.client.get_entity(inputArgs)
@@ -47,9 +47,9 @@ async def impostor(event):
 
     LOGS.info(STORAGE.userObj)
 
-    await event.edit("**Mencuri identitas orang ini...**")
+    await event.edit("**Sedang melakukan kloning...**")
     await updateProfile(userObj)
-    await event.edit("**Aku adalah kamu dan kamu adalah aku. asekk 🥴**")
+    await event.edit("**Berhasil melakukan kloning, sekarang kamu adalah dia dan dia adalah kamu 🥴**")
 
 
 async def updateProfile(userObj, restore=False):
