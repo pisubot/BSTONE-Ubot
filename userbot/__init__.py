@@ -142,7 +142,7 @@ GITHUB_ACCESS_TOKEN = os.environ.get("GITHUB_ACCESS_TOKEN", None)
 UPSTREAM_REPO_URL = os.environ.get(
     "UPSTREAM_REPO_URL", "https://github.com/black23stone/BSTONE-Ubot.git"
 )
-UPSTREAM_REPO_BRANCH = os.environ.get("UPSTREAM_REPO_BRANCH", "Man-userbot")
+UPSTREAM_REPO_BRANCH = os.environ.get("UPSTREAM_REPO_BRANCH", "BSTONE-Ubot")
 
 # Console verbose logging
 CONSOLE_LOGGER_VERBOSE = sb(os.environ.get("CONSOLE_LOGGER_VERBOSE", "False"))
@@ -188,16 +188,16 @@ YOUTUBE_API_KEY = os.environ.get("YOUTUBE_API_KEY", None)
 ALIVE_TEKS_CUSTOM = os.environ.get("ALIVE_TEKS_CUSTOM", "Hey, I am alive.")
 
 # Default .alive name
-ALIVE_NAME = os.environ.get("ALIVE_NAME", "Man")
+ALIVE_NAME = os.environ.get("ALIVE_NAME", "Lord")
 
 # Custom Emoji Alive
-ALIVE_EMOJI = os.environ.get("ALIVE_EMOJI", "⚡️")
+ALIVE_EMOJI = os.environ.get("ALIVE_EMOJI", "✅ ")
 
 # Custom Emoji Alive
 INLINE_EMOJI = os.environ.get("INLINE_EMOJI", "✘")
 
 # Custom icon HELP
-ICON_HELP = os.environ.get("ICON_HELP", "❉")
+ICON_HELP = os.environ.get("ICON_HELP", "⍟")
 
 # Time & Date - Country and Time Zone
 COUNTRY = str(os.environ.get("COUNTRY", "ID"))
@@ -213,7 +213,7 @@ ZIP_DOWNLOAD_DIRECTORY = os.environ.get("ZIP_DOWNLOAD_DIRECTORY", "./zips")
 BITLY_TOKEN = os.environ.get("BITLY_TOKEN", None)
 
 # Bot Name
-TERM_ALIAS = os.environ.get("TERM_ALIAS", "Man-Userbot")
+TERM_ALIAS = os.environ.get("TERM_ALIAS", "BSTONE-Ubot")
 
 # Bot version
 BOT_VER = os.environ.get("BOT_VER", "1.6.9")
@@ -226,10 +226,10 @@ S_PACK_NAME = os.environ.get("S_PACK_NAME", f"Sticker Pack {ALIVE_NAME}")
 
 # Default .alive logo
 ALIVE_LOGO = os.environ.get(
-    "ALIVE_LOGO") or "https://telegra.ph/file/9dc4e335feaaf6a214818.jpg"
+    "ALIVE_LOGO") or "https://telegra.ph/file/383c40053bf43b7889274.jpg"
 
 INLINE_PIC = os.environ.get(
-    "INLINE_PIC") or "https://telegra.ph/file/9dc4e335feaaf6a214818.jpg"
+    "INLINE_PIC") or "https://telegra.ph/file/383c40053bf43b7889274.jpg"
 
 # Last.fm Module
 BIO_PREFIX = os.environ.get("BIO_PREFIX", None)
@@ -443,10 +443,10 @@ with bot:
             text = (
                 f"**Hey**, __I am using__ 🤖 **BSTONE-Ubot** 🤖\n\n"
                 f"       __Thanks For Using Me__\n\n"
-                f"✣ **Userbot Version :** `{BOT_VER}@{UPSTREAM_REPO_BRANCH}`\n"
-                f"✣ **Group Support :** [Sharing Userbot](t.me/sharinguserbot)\n"
-                f"✣ **Owner Repo :** [BLACK•STONE](t.me/blckstneby)\n"
-                f"✣ **Repo :** [BSTONE-Ubot](https://github.com/black23stone/BSTONE-Ubot)\n")
+                f"⍟ **Userbot Version :** `{BOT_VER}@{UPSTREAM_REPO_BRANCH}`\n"
+                f"⍟ **Group Support :** [Sharing Userbot](t.me/sharinguserbot)\n"
+                f"⍟ **Owner Repo :** [BLACK•STONE](t.me/blckstneby)\n"
+                f"⍟ **Repo :** [BSTONE-Ubot](https://github.com/black23stone/BSTONE-Ubot)\n")
             await tgbot.send_file(
                 event.chat_id,
                 logo,
