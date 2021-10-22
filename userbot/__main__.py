@@ -36,7 +36,7 @@ LOGS.info(
     f"Jika {ALIVE_NAME} Membutuhkan Bantuan, Silahkan Gabung ke Grup https://t.me/SharingUserbot"
 )
 
-LOGS.info(f"Man-Userbot ⚙️ V{BOT_VER} [🔥 BERHASIL DIAKTIFKAN! 🔥]")
+LOGS.info(f"BSTONE-Ubot ⚙️ V{BOT_VER} [⚡ BERHASIL DIAKTIFKAN! ⚡]")
 
 
 async def man_userbot_on():
