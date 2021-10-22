@@ -47,7 +47,9 @@ async def impostor(event):
 
     LOGS.info(STORAGE.userObj)
 
-    await event.edit("**Sedang melakukan kloning...**")
+    await event.edit("**Sedang melakukan kloning🎭**")
+    await event.edit("**Sedang melakukan kloning🎭🎭**")
+    await event.edit("**Sedang melakukan kloning🎭🎭🎭**")
     await updateProfile(userObj)
     await event.edit("**Berhasil melakukan kloning, sekarang kamu adalah dia dan dia adalah kamu 🥴**")
 
