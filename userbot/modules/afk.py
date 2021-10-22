@@ -109,12 +109,14 @@ async def on_afk(event):
         msg = None
         if reason:
             message_to_reply = (
-                f"**⭕️ {ALIVE_NAME} Sedang AFK, sejak ** `{total_afk_time}` **yang lalu ⭕️**\n"
+                f"**⭕️ {ALIVE_NAME} Sedang AFK ⭕️**\n"
+                + f"**➠ Sejak ** `{total_afk_time}` **yang lalu.**\n"
                 + f"**➠ Karena :** `{reason}`"
             )
         else:
             message_to_reply = (
-                f"**⭕️ Maaf {ALIVE_NAME} Sedang AFK, sejak ** `{total_afk_time}` **yang lalu ⭕️**"
+                f"**⭕️ {ALIVE_NAME} Sedang AFK ⭕️**\n"
+                + f"**➠ Sejak ** `{total_afk_time}` **yang lalu.**"
             )
         try:
             if pic.endswith((".tgs", ".webp")):
