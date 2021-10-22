@@ -15,7 +15,7 @@ from userbot.events import man_cmd
 
 @bot.on(man_cmd(outgoing=True, pattern=r"kamuii(:? |$)([1-8])?"))
 async def _(fry):
-    await fry.edit("`Mengaktifkan Kekuatan Supersaya...`")
+    await fry.edit("`Mengaktifkan Kekuatan Jentikan Jari Thanos...`")
     level = fry.pattern_match.group(2)
     if fry.fwd_from:
         return
