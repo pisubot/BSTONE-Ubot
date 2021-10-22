@@ -75,7 +75,7 @@ async def _(ping):
         f"**⚡️PONG!!⚡️**\n"
         f"𖣐 **Pinger** - `%sms`\n"
         f"𖣐 **Uptime -** `{uptime}` \n"
-        f"𖣐 **Lord :** [{user.first_name}](tg://user?id={user.id}) 𖣐 " % (duration)
+        f"𖣐 **Lord :** [{user.first_name}](tg://user?id={user.id}) 👑 " % (duration)
     )
 
 
