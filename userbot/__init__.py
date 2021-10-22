@@ -4,7 +4,7 @@
 # you may not use this file except in compliance with the License.
 #
 # inline credit @keselekpermen69
-# Recode by @mrismanaziz
+# Recode by @blckstneby from @mrismanaziz
 # t.me/SharingUserbot
 #
 """ Userbot initialization. """
@@ -353,10 +353,10 @@ with bot:
 async def update_restart_msg(chat_id, msg_id):
     DEFAULTUSER = ALIVE_NAME or "Set `ALIVE_NAME` ConfigVar!"
     message = (
-        f"**Man-UserBot v{BOT_VER} is back up and running!**\n\n"
-        f"**Telethon:** {version.__version__}\n"
-        f"**Python:** {python_version()}\n"
-        f"**User:** {DEFAULTUSER}"
+        f"**BSTONE-Ubot v{BOT_VER} is back up and running!**\n\n"
+        f"**Telethon : ** {version.__version__}\n"
+        f"**Python : ** {python_version()}\n"
+        f"**User : ** {DEFAULTUSER}"
     )
     await bot.edit_message(chat_id, msg_id, message)
     return True
