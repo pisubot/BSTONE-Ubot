@@ -59,12 +59,12 @@ async def _(ping):
     uptime = await get_readable_time((time.time() - StartTime))
     start = datetime.now()
     await ping.edit("**※**")
-    await ping.edit("**※𖢄**")
-    await ping.edit("**※𖢄※**")
-    await ping.edit("**※𖢄※𖢄**")
-    await ping.edit("**※𖢄※𖢄※**")    
-    await ping.edit("**※𖢄※𖢄※𖢄**")
-    await ping.edit("**※𖢄※𖢄※𖢄※**")
+    await ping.edit("**※※**")
+    await ping.edit("**※※※**")
+    await ping.edit("**※※※※**")
+    await ping.edit("**※※※※※**")    
+    await ping.edit("**※※※※※※**")
+    await ping.edit("**※※※※※※※**")
     await ping.edit("**Pinging.**")
     await ping.edit("**Pinging..**")
     await ping.edit("**Pinging...**")
@@ -75,7 +75,7 @@ async def _(ping):
         f"**⚡️PONG!!⚡️**\n"
         f"𖣐 **Pinger** - `%sms`\n"
         f"𖣐 **Uptime -** `{uptime}` \n"
-        f"**𖣐 Lord :** [{user.first_name}](tg://user?id={user.id})" % (duration)
+        f"𖣐 **Lord :** [{user.first_name}](tg://user?id={user.id}) 𖣐 " % (duration)
     )
 
 
