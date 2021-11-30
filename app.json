@@ -1,10 +1,10 @@
 {
-  "name": "BSTONE-Ubot",
-  "description": "[BSTONE-Ubot] Userbot Telegram modular yang berjalan pada Python 3.9+",
-  "logo": "https://telegra.ph/file/383c40053bf43b7889274.jpg",
+  "name": "PIS-Ubot",
+  "description": "[PIS-Ubot] Userbot Telegram modular yang berjalan pada Python 3.9+",
+  "logo": "https://telegra.ph/file/785256129b0880d6e138b.jpg",
   "keywords": ["telegram", "userbot", "bot", "modular", "python"],
-  "repository": "https://github.com/black23stone/BSTONE-Ubot",
-  "telegram": ["https://t.me/mrismanaziz", "https://t.me/tofik_dn", "https://t.me/blckstneby"],
+  "repository": "https://github.com/pisubot/BSTONE-Ubot",
+  "telegram": ["https://t.me/mrismanaziz", "https://t.me/tofik_dn", "https://t.me/blckstneby", https://t.me/Apisesad3"]],
   "success_url": "https://t.me/Lunatic0de",
   "stack": "container",
   "env": {
@@ -44,7 +44,7 @@
     },
     "ALIVE_LOGO": {
       "description": "Gambar dalam module .alive",
-      "value": "https://telegra.ph/file/383c40053bf43b7889274.jpg",
+      "value": "https://telegra.ph/file/785256129b0880d6e138b.jpg",
       "required": false
     },
     "ALIVE_TEKS_CUSTOM": {
