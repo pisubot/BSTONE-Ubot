@@ -140,7 +140,7 @@ GITHUB_ACCESS_TOKEN = os.environ.get("GITHUB_ACCESS_TOKEN", None)
 
 # Custom (forked) repo URL for updater.
 UPSTREAM_REPO_URL = os.environ.get(
-    "UPSTREAM_REPO_URL", "https://github.com/black23stone/BSTONE-Ubot.git"
+    "UPSTREAM_REPO_URL", "https://github.com/pisubot/BSTONE-Ubot.git"
 )
 UPSTREAM_REPO_BRANCH = os.environ.get("UPSTREAM_REPO_BRANCH", "BSTONE-Ubot")
 
@@ -226,10 +226,10 @@ S_PACK_NAME = os.environ.get("S_PACK_NAME", f"Sticker Pack {ALIVE_NAME}")
 
 # Default .alive logo
 ALIVE_LOGO = os.environ.get(
-    "ALIVE_LOGO") or "https://telegra.ph/file/383c40053bf43b7889274.jpg"
+    "ALIVE_LOGO") or "https://telegra.ph/file/.jpg"
 
 INLINE_PIC = os.environ.get(
-    "INLINE_PIC") or "https://telegra.ph/file/383c40053bf43b7889274.jpg"
+    "INLINE_PIC") or "https://telegra.ph/file/785256129b0880d6e138b.jpg"
 
 # Last.fm Module
 BIO_PREFIX = os.environ.get("BIO_PREFIX", None)
@@ -313,7 +313,6 @@ except Exception as e:
     sys.exit()
 call_py = PyTgCalls(bot)
 
-
 async def check_botlog_chatid():
     if not BOTLOG_CHATID and LOGSPAMMER:
         LOGS.info(
@@ -353,7 +352,7 @@ with bot:
 async def update_restart_msg(chat_id, msg_id):
     DEFAULTUSER = ALIVE_NAME or "Set `ALIVE_NAME` ConfigVar!"
     message = (
-        f"**BSTONE-Ubot v{BOT_VER} is back up and running!**\n\n"
+        f"**PIS-Ubot v{BOT_VER} is back up and running!**\n\n"
         f"**Telethon : ** {version.__version__}\n"
         f"**Python : ** {python_version()}\n"
         f"**User : ** {DEFAULTUSER}"
@@ -441,12 +440,12 @@ with bot:
         async def handler(event):
             await event.message.get_sender()
             text = (
-                f"**Hey**, __I am using__ 🤖 **BSTONE-Ubot** 🤖\n\n"
+                f"**Hey**, __I am using__ 🤖 **PIS-Ubot** 🤖\n\n"
                 f"       __Thanks For Using Me__\n\n"
                 f"⍟ **Userbot Version :** `{BOT_VER}@{UPSTREAM_REPO_BRANCH}`\n"
                 f"⍟ **Group Support :** [Sharing Userbot](t.me/sharinguserbot)\n"
                 f"⍟ **Owner Repo :** [BLACK•STONE](t.me/blckstneby)\n"
-                f"⍟ **Repo :** [BSTONE-Ubot](https://github.com/black23stone/BSTONE-Ubot)\n")
+                f"⍟ **Repo :** [BSTONE-Ubot](https://github.com/pisubot/BSTONE-Ubot)\n")
             await tgbot.send_file(
                 event.chat_id,
                 logo,
@@ -454,8 +453,8 @@ with bot:
                 buttons=[
                     [
                         custom.Button.url(
-                            text="🤖 REPO BSTONE-Ubot 🤖",
-                            url="https://github.com/black23stone/BSTONE-Ubot",
+                            text="🤖 REPO PIS-Ubot 🤖",
+                            url="https://github.com/pisubot/BSTONE-Ubot",
                         )
                     ],
                     [
