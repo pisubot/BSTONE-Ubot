@@ -6,7 +6,7 @@
 <a href="https://github.com/black23stone"><img title="Author" src="https://img.shields.io/badge/Author-BLACK•STONE-orange.svg?style=for-the-badge&logo=github"></a>
 </p>
 <p align="center">
-<a href="https://github.com/black23stone/followers"><img title="Followers" src="https://img.shields.io/github/followers/zeeoneofc?color=red&style=flat-square"></a>
+<a href="https://github.com/pisubot/followers"><img title="Followers" src="https://img.shields.io/github/followers/zeeoneofc?color=red&style=flat-square"></a>
 </p>
 <p align='center'>
    <a href="https://wa.me/62"><img height="30" src="https://c.top4top.io/p_1837yybbf0.jpeg"></a>&nbsp;&nbsp;
