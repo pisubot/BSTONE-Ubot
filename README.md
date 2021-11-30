@@ -9,8 +9,8 @@
 <a href="https://github.com/black23stone/followers"><img title="Followers" src="https://img.shields.io/github/followers/zeeoneofc?color=red&style=flat-square"></a>
 </p>
 <p align='center'>
-   <a href="https://wa.me/62895338264382"><img height="30" src="https://c.top4top.io/p_1837yybbf0.jpeg"></a>&nbsp;&nbsp;
-   <a href="https://instagram.com/aswadd___"><img height="30" src="https://raw.githubusercontent.com/TobyG74/TobyG74/main/instagram.jpg"></a>
+   <a href="https://wa.me/62"><img height="30" src="https://c.top4top.io/p_1837yybbf0.jpeg"></a>&nbsp;&nbsp;
+   <a href="https://instagram.com/xl_apis_ips4"><img height="30" src="https://raw.githubusercontent.com/TobyG74/TobyG74/main/instagram.jpg"></a>
 
 BSTONE-Ubot adalah userbot Telegram modular yang berjalan di Python3 dengan database sqlalchemy.
 
