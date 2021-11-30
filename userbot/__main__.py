@@ -36,7 +36,7 @@ LOGS.info(
     f"Jika {ALIVE_NAME} Membutuhkan Bantuan, Silahkan Gabung ke Grup https://t.me/SharingUserbot"
 )
 
-LOGS.info(f"BSTONE-Ubot ⚙️ V{BOT_VER} [⚡ BERHASIL DIAKTIFKAN! ⚡]")
+LOGS.info(f"PIS-UBOT ⚙️ V{BOT_VER} [⚡ BERHASIL DIAKTIFKAN! ⚡]")
 
 
 async def man_userbot_on():
@@ -44,7 +44,7 @@ async def man_userbot_on():
         if BOTLOG_CHATID != 0:
             await bot.send_message(
                 BOTLOG_CHATID,
-                f"🤖 **BSTONE-Ubot telah diaktifkan! ⚡**\n━━\n⩴⧐ **Userbot Vers. -** `{BOT_VER}@{UPSTREAM_REPO_BRANCH}`\n⩴⧐ **Ketik** `{cmd}alive` **untuk mengecek Bot.**\n━━",
+                f"🤖 **PIS-UBOT telah diaktifkan! ⚡**\n━━\n⩴⧐ **Userbot Vers. -** `{BOT_VER}@{UPSTREAM_REPO_BRANCH}`\n⩴⧐ **Ketik** `{cmd}alive` **untuk mengecek Bot.**\n━━",
             )
     except Exception as e:
         LOGS.info(str(e))
