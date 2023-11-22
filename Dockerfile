@@ -1,6 +1,6 @@
 FROM mrismanaziz/man-userbot:buster
 
-RUN git clone -b Man-Userbot https://github.com/mrismanaziz/Man-Userbot /home/man-userbot/ \
+RUN git clone -b Man-Userbot https://github.com/Pisubot/Man-Userbot /home/man-userbot/ \
     && chmod 777 /home/man-userbot \
     && mkdir /home/man-userbot/bin/
 
